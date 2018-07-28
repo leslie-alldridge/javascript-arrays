@@ -10,6 +10,7 @@
   </head>
   <body>
     <h1>Javascript Array Manipulator</h1>
+    <h3>Your Existing Array</h3>
     <textarea id="userInput" rows="4" cols="50" placeholder="Enter Array Data Here"></textarea>
     <select id="selectBox" onchange="changeFunc();">
         <option value="concat">Concat</option>
@@ -20,7 +21,12 @@
     <div>
       <p id="description">The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.</p>
     </div>
+    
+    <h3>Your New Data / Manipulation Query</h3>
+    <textarea id="userData" rows="4" cols="50" placeholder="New Array Data/Manipulation Here"></textarea>
+
     <button onclick="createArray();">See Changes</button>
-    <textarea rows="4" cols="50" placeholder="Output Array Data Here"></textarea>
+    <h3>Output:</h3>
+    <p id="output"></p>
   </body>
 </html>

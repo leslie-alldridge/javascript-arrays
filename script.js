@@ -1,3 +1,5 @@
+
+
 function changeFunc() {
     var selectBox = document.getElementById("selectBox");
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
@@ -19,6 +21,27 @@ function changeFunc() {
 }
 
 function createArray(){
-    var inputArray = document.getElementById('userInput').value;
-    console.log(inputArray)
+    //get user input in both fields, split by commas and send to an array
+    var inputArray = [];
+    var userString = document.getElementById('userInput').value;
+    inputArray = userString.split(',');
+    console.log(inputArray);
+    //check what function they chose 
+    var selectBox = document.getElementById("selectBox");
+    var selectedValue = selectBox.options[selectBox.selectedIndex].value;
+
+    //depending on that, concat etc. the data 
+    switch(selectedValue) {
+        case 'concat': 
+        //get second field input as an array since concat is selected.
+        var newData = [];
+        var secondUserString = document.getElementById('userData').value;
+        newData = secondUserString.split(',');
+        console.log(newData);
+        var finalOutput = inputArray.concat(newData);
+        console.log(finalOutput);
+        var output = document.getElementById('output');
+        output.innerHTML = "[" + finalOutput + "]";
+        break;
+    }
 }
