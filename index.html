@@ -5,9 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="script.js"></script>
-    <link rel="stylesheet" type="text/css" href=".css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
     <title>Javascript Arrays</title>
   </head>
   <body>
+    <h1>Javascript Array Manipulator</h1>
+    <textarea id="userInput" rows="4" cols="50" placeholder="Enter Array Data Here"></textarea>
+    <select id="selectBox" onchange="changeFunc();">
+        <option value="concat">Concat</option>
+        <option value="filter">Filter</option>
+        <option value="find">Find</option>
+        <option value="forEach">forEach</option>
+    </select>
+    <div>
+      <p id="description">The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.</p>
+    </div>
+    <button onclick="createArray();">See Changes</button>
+    <textarea rows="4" cols="50" placeholder="Output Array Data Here"></textarea>
   </body>
 </html>
