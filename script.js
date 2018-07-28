@@ -39,6 +39,8 @@ function changeFunc() {
         descriptionField.innerHTML="The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified."
         case 'splice':
         descriptionField.innerHTML="The splice() method changes the contents of an array by removing existing elements and/or adding new elements."
+        case 'unshift':
+        descriptionField.innerHTML="The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array."
     }
 }
 
@@ -200,6 +202,24 @@ function createArray(){
 
         case 'splice':
         
+        break;
+
+        //unshift case, adds element to start of array and returns new array length
+        case 'unshift':
+        var newData = [];
+        var secondUserString = document.getElementById('userData').value;
+        newData = secondUserString.split(',');
+        console.log(newData);
+        if (newData.length > 1){
+            var finalOutput = inputArray.unshift(newData[0],newData[1]);
+        } else {
+        var finalOutput = inputArray.unshift(newData);
+        }
+        console.log(finalOutput);
+        var output = document.getElementById('output');
+        output.innerHTML = "[" + finalOutput + "] is the new array length and the array is " + "[" + inputArray + "]";
+        checkOutput();
+        break;
     }
 
     function checkOutput (){
