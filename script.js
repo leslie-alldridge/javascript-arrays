@@ -4,6 +4,7 @@ function changeFunc() {
     var selectBox = document.getElementById("selectBox");
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
     var descriptionField = document.getElementById("description");
+    var userDataField = document.getElementById("userData");
     switch(selectedValue) {
         case 'concat': 
         descriptionField.innerHTML="The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.";
@@ -19,6 +20,11 @@ function changeFunc() {
         break;
         case 'indexOf':
         descriptionField.innerHTML="The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present."
+        case 'map':
+        descriptionField.innerHTML="The map() method creates a new array with the results of calling a provided function on every element in the calling array. Example function x => x * 2"
+        case 'pop':
+        descriptionField.innerHTML="The pop() method removes the last element from an array and returns that element. This method changes the length of the array."
+        userDataField.disabled = true;
     }
 }
 
@@ -93,6 +99,28 @@ function createArray(){
         console.log(finalOutput);
         var output = document.getElementById('output');
         output.innerHTML = "[" + finalOutput + "]";
+        checkOutput();
+        break;
+
+        //map case - creates new array based on function 
+        case 'map':
+        var newData = [];
+        var secondUserString = document.getElementById('userData').value;
+        newData = secondUserString;
+        var fn = eval(newData);
+        var finalOutput = inputArray.map(fn);
+        console.log(finalOutput);
+        var output = document.getElementById('output');
+        output.innerHTML = "[" + finalOutput + "]";
+        checkOutput();
+        break;
+
+        //pop case - removes last item and returns new array
+        case 'pop':
+        var finalOutput = inputArray.pop();
+        console.log(finalOutput);
+        var output = document.getElementById('output');
+        output.innerHTML = "[" + finalOutput + "] was removed from the array which now looks like " + "[" + inputArray + "]";
         checkOutput();
         break;
     }
