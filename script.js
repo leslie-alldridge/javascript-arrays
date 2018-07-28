@@ -9,7 +9,7 @@ function changeFunc() {
         descriptionField.innerHTML="The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.";
         break;
         case 'filter': 
-        descriptionField.innerHTML="filter does this to an array";
+        descriptionField.innerHTML="The filter() method creates a new array with all elements that pass the test implemented by the provided function. An example function is word => word.length > 8 this checks for words longer than 8 characters.";
         break;
         case 'find': 
         descriptionField.innerHTML="find does this to an array";
@@ -43,5 +43,17 @@ function createArray(){
         var output = document.getElementById('output');
         output.innerHTML = "[" + finalOutput + "]";
         break;
+
+        //filter case
+        case 'filter':
+        var newData = [];
+        var secondUserString = document.getElementById('userData').value;
+        newData = secondUserString;
+        var fn = eval(newData);
+        console.log(newData);
+        var finalOutput = inputArray.filter(fn);
+        console.log(finalOutput);
+        var output = document.getElementById('output');
+        output.innerHTML = "[" + finalOutput + "]";
     }
 }
