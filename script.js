@@ -32,6 +32,13 @@ function changeFunc() {
         case 'reverse':
         descriptionField.innerHTML="The reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first."
         userDataField.disabled = true;
+        case 'shift':
+        descriptionField.innerHTML="The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array."
+        userDataField.disabled = true;
+        case 'slice':
+        descriptionField.innerHTML="The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified."
+        case 'splice':
+        descriptionField.innerHTML="The splice() method changes the contents of an array by removing existing elements and/or adding new elements."
     }
 }
 
@@ -164,6 +171,35 @@ function createArray(){
         output.innerHTML = "[" + finalOutput + "] array is now reversed in order";
         checkOutput();
         break;
+
+        //shift case - remove first item in array
+        case 'shift':
+        var finalOutput = inputArray.shift();
+        console.log(finalOutput);
+        var output = document.getElementById('output');
+        output.innerHTML = "[" + finalOutput + "] was removed from the array which now looks like " + "[" + inputArray + "]";
+        checkOutput();
+        break;
+
+        //slice - cuts a portion out of the array 
+        case 'slice':
+        var newData = [];
+        var secondUserString = document.getElementById('userData').value;
+        newData = secondUserString.split(',');
+        console.log(newData);
+        if (newData.length > 1){
+            var finalOutput = inputArray.slice(newData[0],newData[1]);
+        } else {
+        var finalOutput = inputArray.slice(newData);
+        }
+        console.log(finalOutput);
+        var output = document.getElementById('output');
+        output.innerHTML = "[" + finalOutput + "]";
+        checkOutput();
+        break;
+
+        case 'splice':
+        
     }
 
     function checkOutput (){
