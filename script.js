@@ -27,6 +27,8 @@ function changeFunc() {
         userDataField.disabled = true;
         case 'push':
         descriptionField.innerHTML="The push() method adds one or more elements to the end of an array and returns the new length of the array."
+        case 'reduce':
+        descriptionField.innerHTML="The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value. Try using this function with numbers (function (accumulator, currentValue) {return accumulator * currentValue;})"
     }
 }
 
@@ -135,6 +137,19 @@ function createArray(){
         console.log(finalOutput);
         var output = document.getElementById('output');
         output.innerHTML = "[" + finalOutput + "] is the length of your new array";
+        checkOutput();
+        break;
+
+        //reduce case - reduces array to a single value
+        case 'reduce':
+        var newData = [];
+        var secondUserString = document.getElementById('userData').value;
+        newData = secondUserString;
+        var fn = eval(newData);
+        var finalOutput = inputArray.reduce(fn);
+        console.log(finalOutput);
+        var output = document.getElementById('output');
+        output.innerHTML = "[" + finalOutput + "]";
         checkOutput();
         break;
     }
