@@ -12,7 +12,7 @@ function changeFunc() {
         descriptionField.innerHTML="The filter() method creates a new array with all elements that pass the test implemented by the provided function. An example function is word => word.length > 8 this checks for words longer than 8 characters.";
         break;
         case 'find': 
-        descriptionField.innerHTML="find does this to an array";
+        descriptionField.innerHTML="The find() method returns the value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned. An example function is (function(element){ return element > 10; }) as this returns elements greater than 10.";
         break;
         case 'forEach': 
         descriptionField.innerHTML="forEach does this to an array";
@@ -44,7 +44,7 @@ function createArray(){
         output.innerHTML = "[" + finalOutput + "]";
         break;
 
-        //filter case
+        //filter case - second field evaluated as a function 
         case 'filter':
         var newData = [];
         var secondUserString = document.getElementById('userData').value;
@@ -52,6 +52,18 @@ function createArray(){
         var fn = eval(newData);
         console.log(newData);
         var finalOutput = inputArray.filter(fn);
+        console.log(finalOutput);
+        var output = document.getElementById('output');
+        output.innerHTML = "[" + finalOutput + "]";
+        break;
+        //find case - second field eval as a function
+        case 'find':
+        var newData = [];
+        var secondUserString = document.getElementById('userData').value;
+        newData = secondUserString;
+        var fn = eval(newData);
+        console.log(newData);
+        var finalOutput = inputArray.find(fn);
         console.log(finalOutput);
         var output = document.getElementById('output');
         output.innerHTML = "[" + finalOutput + "]";
