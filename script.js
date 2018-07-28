@@ -29,6 +29,9 @@ function changeFunc() {
         descriptionField.innerHTML="The push() method adds one or more elements to the end of an array and returns the new length of the array."
         case 'reduce':
         descriptionField.innerHTML="The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value. Try using this function with numbers (function (accumulator, currentValue) {return accumulator * currentValue;})"
+        case 'reverse':
+        descriptionField.innerHTML="The reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first."
+        userDataField.disabled = true;
     }
 }
 
@@ -150,6 +153,15 @@ function createArray(){
         console.log(finalOutput);
         var output = document.getElementById('output');
         output.innerHTML = "[" + finalOutput + "]";
+        checkOutput();
+        break;
+
+        //reverse array function - no second input needed
+        case 'reverse':
+        var finalOutput = inputArray.reverse();
+        console.log(finalOutput);
+        var output = document.getElementById('output');
+        output.innerHTML = "[" + finalOutput + "] array is now reversed in order";
         checkOutput();
         break;
     }
