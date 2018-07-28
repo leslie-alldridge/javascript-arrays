@@ -25,6 +25,8 @@ function changeFunc() {
         case 'pop':
         descriptionField.innerHTML="The pop() method removes the last element from an array and returns that element. This method changes the length of the array."
         userDataField.disabled = true;
+        case 'push':
+        descriptionField.innerHTML="The push() method adds one or more elements to the end of an array and returns the new length of the array."
     }
 }
 
@@ -121,6 +123,18 @@ function createArray(){
         console.log(finalOutput);
         var output = document.getElementById('output');
         output.innerHTML = "[" + finalOutput + "] was removed from the array which now looks like " + "[" + inputArray + "]";
+        checkOutput();
+        break;
+
+        //push case - push new item into array 
+        case 'push':
+        var newData = [];
+        var secondUserString = document.getElementById('userData').value;
+        newData = secondUserString;
+        var finalOutput = inputArray.push(newData);
+        console.log(finalOutput);
+        var output = document.getElementById('output');
+        output.innerHTML = "[" + finalOutput + "] is the length of your new array";
         checkOutput();
         break;
     }
