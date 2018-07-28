@@ -201,7 +201,20 @@ function createArray(){
         break;
 
         case 'splice':
-        
+        var newData = [];
+        var secondUserString = document.getElementById('userData').value;
+        newData = secondUserString.split(',');
+        console.log(newData);
+        if (newData.length > 1){
+            inputArray.splice(newData[0],newData[1], newData[2]);
+        } else {
+        alert("Splice needs two parameters and an element. For example '1, 0, 'Feb'");
+        break;
+        }
+        console.log(finalOutput);
+        var output = document.getElementById('output');
+        output.innerHTML = "Your new array is [" + inputArray + "]";
+        checkOutput();
         break;
 
         //unshift case, adds element to start of array and returns new array length
