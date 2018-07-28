@@ -15,8 +15,10 @@ function changeFunc() {
         descriptionField.innerHTML="The find() method returns the value of the first element in the array that satisfies the provided testing function. Otherwise undefined is returned. An example function is (function(element){ return element > 10; }) as this returns elements greater than 10.";
         break;
         case 'forEach': 
-        descriptionField.innerHTML="forEach does this to an array";
+        descriptionField.innerHTML="The forEach() method executes a provided function once for each array element. Try using this provided function as an example: (function(element) {console.log(element);});"
         break;
+        case 'indexOf':
+        descriptionField.innerHTML="The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present."
     }
 }
 
@@ -37,11 +39,11 @@ function createArray(){
         var newData = [];
         var secondUserString = document.getElementById('userData').value;
         newData = secondUserString.split(',');
-        console.log(newData);
         var finalOutput = inputArray.concat(newData);
         console.log(finalOutput);
         var output = document.getElementById('output');
         output.innerHTML = "[" + finalOutput + "]";
+        checkOutput();
         break;
 
         //filter case - second field evaluated as a function 
@@ -50,11 +52,11 @@ function createArray(){
         var secondUserString = document.getElementById('userData').value;
         newData = secondUserString;
         var fn = eval(newData);
-        console.log(newData);
         var finalOutput = inputArray.filter(fn);
         console.log(finalOutput);
         var output = document.getElementById('output');
         output.innerHTML = "[" + finalOutput + "]";
+        checkOutput();
         break;
         //find case - second field eval as a function
         case 'find':
@@ -62,10 +64,42 @@ function createArray(){
         var secondUserString = document.getElementById('userData').value;
         newData = secondUserString;
         var fn = eval(newData);
-        console.log(newData);
         var finalOutput = inputArray.find(fn);
         console.log(finalOutput);
         var output = document.getElementById('output');
         output.innerHTML = "[" + finalOutput + "]";
+        checkOutput();
+        break;
+
+        //forEach case - second field eval as function
+        case 'forEach':
+        var newData = [];
+        var secondUserString = document.getElementById('userData').value;
+        newData = secondUserString;
+        var fn = eval(newData);
+        var finalOutput = inputArray.forEach(fn);
+        console.log(finalOutput);
+        var output = document.getElementById('output');
+        output.innerHTML = "[" + finalOutput + "]";
+        checkOutput();
+        break;
+
+        //indexOf case - second field needs number and string input
+        case 'indexOf':
+        var newData = [];
+        var secondUserString = document.getElementById('userData').value;
+        newData = secondUserString;
+        var finalOutput = inputArray.indexOf(newData);
+        console.log(finalOutput);
+        var output = document.getElementById('output');
+        output.innerHTML = "[" + finalOutput + "]";
+        checkOutput();
+        break;
+    }
+
+    function checkOutput (){
+        if(output.innerHTML === '[undefined]'){
+            output.innerHTML = "invalid function or check Dev Tools Console";
+        }
     }
 }
