@@ -20,27 +20,37 @@ function changeFunc() {
         break;
         case 'indexOf':
         descriptionField.innerHTML="The indexOf() method returns the first index at which a given element can be found in the array, or -1 if it is not present."
+        break;
         case 'map':
         descriptionField.innerHTML="The map() method creates a new array with the results of calling a provided function on every element in the calling array. Example function x => x * 2"
+        break;
         case 'pop':
         descriptionField.innerHTML="The pop() method removes the last element from an array and returns that element. This method changes the length of the array."
         userDataField.disabled = true;
+        break;
         case 'push':
         descriptionField.innerHTML="The push() method adds one or more elements to the end of an array and returns the new length of the array."
+        break;
         case 'reduce':
         descriptionField.innerHTML="The reduce() method applies a function against an accumulator and each element in the array (from left to right) to reduce it to a single value. Try using this function with numbers (function (accumulator, currentValue) {return accumulator * currentValue;})"
+        break;
         case 'reverse':
         descriptionField.innerHTML="The reverse() method reverses an array in place. The first array element becomes the last, and the last array element becomes the first."
         userDataField.disabled = true;
+        break;
         case 'shift':
         descriptionField.innerHTML="The shift() method removes the first element from an array and returns that removed element. This method changes the length of the array."
         userDataField.disabled = true;
+        break;
         case 'slice':
         descriptionField.innerHTML="The slice() method returns a shallow copy of a portion of an array into a new array object selected from begin to end (end not included). The original array will not be modified."
+        break;
         case 'splice':
         descriptionField.innerHTML="The splice() method changes the contents of an array by removing existing elements and/or adding new elements."
+        break;
         case 'unshift':
         descriptionField.innerHTML="The unshift() method adds one or more elements to the beginning of an array and returns the new length of the array."
+        break;
     }
 }
 
@@ -241,3 +251,6 @@ function createArray(){
         }
     }
 }
+
+//
+

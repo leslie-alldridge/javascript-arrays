@@ -4,39 +4,69 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="script.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+
+
     <title>Javascript Arrays</title>
   </head>
   <body>
+    <div class="container">
     <h1>Javascript Array Manipulator</h1>
-    <h3>Your Existing Array (without [])</h3>
-    <textarea id="userInput" rows="4" cols="50" placeholder="Enter Array Data Here"></textarea>
-    <select id="selectBox" onchange="changeFunc();">
-        <option value="concat">Concat</option>
-        <option value="filter">Filter</option>
-        <option value="find">Find</option>
-        <option value="forEach">forEach</option>
-        <option value="indexOf">indexOf</option>
-        <option value="map">Map</option>
-        <option value="pop">Pop</option>
-        <option value="push">Push</option>
-        <option value="reduce">Reduce</option>
-        <option value="reverse">Reverse</option>
-        <option value="shift">Shift</option>
-        <option value="slice">Slice</option>
-        <option value="splice">Splice</option>
-        <option value="unshift">Unshift</option>
-    </select>
     <div>
-      <p id="description">The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.</p>
-    </div>
-    
-    <h3>Your New Data / Function</h3>
-    <textarea id="userData" rows="4" cols="50" placeholder="New Array Data/Manipulation Here"></textarea>
+    <h3><i class="fas fa-arrow-alt-circle-right"></i>
 
-    <button onclick="createArray();">See Changes</button>
-    <h3>Output:</h3>
+      Pick Array Method</h3>
+    </div>
+   
+
+    <div class="custom-select" style="width:200px;">
+      
+      <select id="selectBox" onchange="changeFunc();">
+          <option value="concat">Concat</option>
+          <option value="filter">Filter</option>
+          <option value="find">Find</option>
+          <option value="forEach">forEach</option>
+          <option value="indexOf">indexOf</option>
+          <option value="map">Map</option>
+          <option value="pop">Pop</option>
+          <option value="push">Push</option>
+          <option value="reduce">Reduce</option>
+          <option value="reverse">Reverse</option>
+          <option value="shift">Shift</option>
+          <option value="slice">Slice</option>
+          <option value="splice">Splice</option>
+          <option value="unshift">Unshift</option>
+      </select>
+      </div>
+      <div>
+          <p id="description">The concat() method is used to merge two or more arrays. This method does not change the existing arrays, but instead returns a new array.</p>
+        </div>
+    <h3><i class="fas fa-arrow-alt-circle-right"></i>
+
+      Your Existing Array (without square braces)</h3>
+    <div>
+    <textarea id="userInput" rows="4" cols="50" placeholder="Enter Array Data Here"></textarea>
+  </div>
+    
+    
+    
+    <h3><i class="fas fa-arrow-alt-circle-right"></i>
+
+      Your New Data / Function</h3>
+    <div>
+    <textarea id="userData" rows="4" cols="50" placeholder="New Array Data/Manipulation Here"></textarea>
+  </div>
+  <div>
+    <button class="button" onclick="createArray();">See Changes</button>
+  </div>
+    <h3><i class="fas fa-arrow-alt-circle-right"></i>
+
+      Output:</h3>
     <p id="output"></p>
+  </div>
+  <script src="script.js"></script>
   </body>
 </html>

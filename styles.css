@@ -1,3 +1,112 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
 body {
-    background-color: blue;
+    background-color: #F5BB00;
+   
 }
+
+h2, h3, h4 {
+    color: #250001;
+    font-family: 'Raleway', sans-serif;
+}
+
+h1{
+    color: #A50104;
+    font-family: 'Raleway', sans-serif;
+    font-size: 3em;
+}
+
+h3{
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+textarea {
+   
+    height:150px;;
+    max-width:600px;
+    color:#250001;
+    font-weight:400;
+    font-size:20px;
+    font-family:'Ubuntu', Helvetica, Arial, sans-serif;
+    width:100%;
+    background:#fff;
+    border-radius:3px;
+    line-height:2em;
+    border:none;
+    box-shadow:0px 0px 5px 1px rgba(0,0,0,0.1);
+    padding:30px;
+    -webkit-transition: height 2s ease;
+  -moz-transition: height 2s ease;
+  -ms-transition: height 2s ease;
+  -o-transition: height 2s ease;
+  transition: height 2s ease;
+  }
+  
+  * {
+    -webkit-font-smoothing:antialiased !important;
+  }
+
+  .container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+  }
+  
+  #selectBox {
+   
+      margin-bottom: 20px;
+      color:#A50104;
+      width: 200px;
+  }
+ 
+  .fas {
+    color:#A50104;
+  }
+
+  #description {
+      color: #590004;
+      font-weight: 700;
+      font-family: 'Roboto Condensed', sans-serif;
+      max-width: 800px;
+  }
+
+  #output {
+    color: #590004;
+    font-weight: 700;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 3em;
+    max-width: 800px;
+    overflow-wrap: break-word;
+}
+.button {
+    margin-top: 12px; 
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+  
+  .button:hover {
+    background-color: #CC002C;
+    box-shadow: 0px 15px 20px rgba(143, 13, 13, 0.4);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+ 
