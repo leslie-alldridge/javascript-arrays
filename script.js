@@ -59,7 +59,6 @@ function createArray(){
     var inputArray = [];
     var userString = document.getElementById('userInput').value;
     inputArray = userString.split(',');
-    console.log(inputArray);
     //check what function they chose 
     var selectBox = document.getElementById("selectBox");
     var selectedValue = selectBox.options[selectBox.selectedIndex].value;
